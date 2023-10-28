@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Steve\\source\\repos\\ticket-system\\ticket-system\\ticket-system.csproj": {}
+    "C:\\Users\\Steve\\Documents\\Website\\ticket-system\\ticket-system\\ticket-system.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Steve\\source\\repos\\ticket-system\\ticket-system\\ticket-system.csproj": {
+    "C:\\Users\\Steve\\Documents\\Website\\ticket-system\\ticket-system\\ticket-system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Steve\\source\\repos\\ticket-system\\ticket-system\\ticket-system.csproj",
+        "projectUniqueName": "C:\\Users\\Steve\\Documents\\Website\\ticket-system\\ticket-system\\ticket-system.csproj",
         "projectName": "ticket-system",
-        "projectPath": "C:\\Users\\Steve\\source\\repos\\ticket-system\\ticket-system\\ticket-system.csproj",
+        "projectPath": "C:\\Users\\Steve\\Documents\\Website\\ticket-system\\ticket-system\\ticket-system.csproj",
         "packagesPath": "C:\\Users\\Steve\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Steve\\source\\repos\\ticket-system\\ticket-system\\obj\\",
+        "outputPath": "C:\\Users\\Steve\\Documents\\Website\\ticket-system\\ticket-system\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -63,7 +63,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
