@@ -1,2 +1,2 @@
 # ticket-system
-This is just a project wanted to practice my coding skills and to learn new ones.
+Welome this is my web base ticketting system. Here users can send tickets with problems they may have in to a databse so that help desk users may take care of you when they are available.
