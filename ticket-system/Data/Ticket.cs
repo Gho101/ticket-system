@@ -1,4 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿/*
+ * This File Is how the database should created and format the data Tabel for Tickets
+ */
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;

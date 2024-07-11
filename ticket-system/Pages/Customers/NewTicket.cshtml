@@ -1,5 +1,5 @@
 ﻿@page
-@model ticket_system.Pages.Tickets.NewTicketModel
+@model NewTicketModel
 @{
 }
 
@@ -16,15 +16,9 @@
 
 <form method="POST">
     <div class="row mb-3">
-        <label class="col-sm-3 col-form-labl">Name</label>
-        <div class="col-sm-6">
-            <input type="text" class="from-control" name="name" value="@Model.ticket.customer">
-        </div>
-    </div>
-    <div class="row mb-3">
         <label class="col-sm-3 col-form-labl">Problem</label>
         <div class="col-sm-6">
-            <input type="text" class="from-control" name="Problem" value="@Model.ticket.problem">
+            <input type="text" class="from-control" name="Problem" value="@Model.ticket.problem" required>
         </div>
     </div>
 
@@ -46,7 +40,7 @@
             <button type="submit" class="btn-primary">Submit</button>
         </div>
         <div class="col-sm-3 d-grid">
-            <a class="btn btn-outline-primary" href="/Tickets/TicketBelletin" role="button">Cancel</a>
+            <a class="btn btn-outline-primary" href="/Customers/CustomerTickets?id=@Model.customer.id">Cancel</a>
         </div>
     </div>
 </form>

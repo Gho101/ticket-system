@@ -1,0 +1,55 @@
+﻿@page
+@using Microsoft.Data.SqlClient;
+
+@{
+    string connectionString = "Server=LAPTOP-97T368JO;Database=Ticket_Problem;Trusted_Connection=True; TrustServerCertificate=True;";
+    String id = Request.Query["id"];
+    int Cid;
+
+    try
+    {
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+            String sql = "SELECT CustomerID FROM Tickets WHERE Tickets.ID = @ID";
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@ID", id);
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        Cid = reader.GetInt32(0);
+                    }
+                    else
+                    {
+                        Cid = -1;
+                    }
+
+                }
+
+            }
+            String sqlDel = "DELETE FROM Tickets WHERE id=@id;";
+            using (SqlCommand command = new SqlCommand(sqlDel, connection))
+            {
+                command.Parameters.AddWithValue("@id", id);
+
+                command.ExecuteNonQuery();
+
+            }
+        }
+        if (Cid == -1)
+        {
+            Response.Redirect("/Customers");
+        }
+        else
+        {
+            Response.Redirect($"/Customers/CustomerTickets?id={Cid}");
+        }
+        
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("An error occurred: " + ex.Message);
+    } 
+}
