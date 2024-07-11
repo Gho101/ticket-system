@@ -10,14 +10,32 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ticket_system
 build_property.RootNamespace = ticket_system
 build_property.ProjectDir = C:\Users\Steve\OneDrive\Documents\Projects\ticket-system\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\Users\Steve\OneDrive\Documents\Projects\ticket-system
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Customer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXIuY3NodG1s
+[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Customers/Customer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEN1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Customers/CustomerTickets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEN1c3RvbWVyVGlja2V0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Customers/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Customers/NewCustomer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXE5ld0N1c3RvbWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Customers/NewTicket.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXE5ld1RpY2tldC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Error.cshtml]
@@ -36,8 +54,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Tickets/NewTicket.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlja2V0c1xOZXdUaWNrZXQuY3NodG1s
+[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Tickets/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlja2V0c1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Tickets/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlja2V0c1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Tickets/TicketBelletin.cshtml]

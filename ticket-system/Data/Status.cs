@@ -1,4 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿/*
+ * This File Is how the database should created and format the data Tabel for Status
+ */
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ticket_system.Data
 {

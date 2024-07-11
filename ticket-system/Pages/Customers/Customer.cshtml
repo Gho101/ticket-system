@@ -1,0 +1,34 @@
+﻿@page
+@model CustomerModel
+@{
+    ViewData["Title"] = "Customer";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Customer</h1>
+    <p>Who would you like to be or creat a new profile,</p>
+</div>
+
+<a class='btn btn-primary btn-sm' href='/Customers/NewCustomer'>New Customer</a>
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Customer</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.listCustomers)
+            {
+                <tr>
+
+                    <td> 
+                        <a class="btn btn-success btn-sm" href="/Customers/CustomerTickets?id=@item.id">@item.Name</a>
+                        @* <a class="btn btn-danger btn-sm" href="/Customers/Delete?id=@item.id">Delete</a> *@
+                    </td>  
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

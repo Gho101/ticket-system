@@ -4,6 +4,8 @@ using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 
+
+
 namespace ticket_system.Pages.Tickets
 {
     public class TicketBelletinModel : PageModel
@@ -14,9 +16,9 @@ namespace ticket_system.Pages.Tickets
         {
             try
             {
-                String connnrctionString = "Server=LAPTOP-97T368JO;Database=Ticket_Problem;Trusted_Connection=True; TrustServerCertificate=True;";
+                String connnectionString = "Server=LAPTOP-97T368JO;Database=Ticket_Problem;Trusted_Connection=True; TrustServerCertificate=True;";
 
-                using (SqlConnection connection = new SqlConnection(connnrctionString))
+                using (SqlConnection connection = new SqlConnection(connnectionString))
                 {
                     connection.Open();
 
