@@ -2,26 +2,25 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Data.SqlClient;
 
-
-namespace ticket_system.Pages.Customers
+namespace ticket_system.Pages.Workers
 {
-    public class CustomerModel : PageModel
+    public class WorkerModel : PageModel
     {
-        public List<Customer> listCustomers = new List<Customer>();
+        public List<Worker> listWorker = new List<Worker>();
 
         public void ReadingSql(SqlDataReader reader)
         {
             while (reader.Read())
             {
-                Customer customer = new Customer();
+                Worker worker = new Worker();
 
-                customer.id = "" + reader.GetInt32(0);
-                customer.Name = reader.GetString(1);
+                worker.id = "" + reader.GetInt32(0);
+                worker.Name = reader.GetString(1);
 
-                listCustomers.Add(customer);
+                listWorker.Add(worker);
             }
         }
-   
+
         public void OnGet()
         {
             try
@@ -30,24 +29,24 @@ namespace ticket_system.Pages.Customers
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    String sql = "SELECT * FROM Customers;";
+                    String sql = "SELECT * FROM Workers;";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        using(SqlDataReader reader = command.ExecuteReader())
+                        using (SqlDataReader reader = command.ExecuteReader())
                         {
                             ReadingSql(reader);
                         }
                     }
                 }
             }
-            catch(Exception ex) 
+            catch (Exception ex)
             {
-                Console.WriteLine("Exception: " + ex.ToString());
+                Console.WriteLine("Exception: " + ex.Message);
             }
         }
     }
 
-    public class Customer
+    public class Worker
     {
         public String? id;
         public String? Name;

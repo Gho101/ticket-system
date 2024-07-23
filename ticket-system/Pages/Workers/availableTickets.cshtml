@@ -1,0 +1,33 @@
+﻿@page
+@model ticket_system.Pages.Workers.availableTicketsModel
+@{
+}
+
+<br>
+<h2>List of Open Tickets</h2>
+
+<a class='btn btn-primary btn-sm' href="">My Pickup</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Customer</th>
+            <th>Problem</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.listTickets)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.customer</td>
+                <td>@item.problem</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" href="">Pickup</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
