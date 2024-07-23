@@ -1,0 +1,32 @@
+﻿@page
+@model ticket_system.Pages.Workers.WorkerModel
+@{
+    ViewData["Title"] = "Worker";
+}
+
+<div class="text-center">
+    <h1 class="display-4"> Welcome Worker</h1>
+    <p>Which worker are you?</p>
+</div>
+
+<a class="btn btn-primary btn-sm" href="/Workers/NewWorker"> New Worker</a>
+
+<div class="text-center">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Worker</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.listWorker)
+            {
+                <tr>
+                    <td>
+                        <a class="btn btn-success btn-sm" href="/Workers/TicketsAvailable?id=@item.id">@item.Name</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

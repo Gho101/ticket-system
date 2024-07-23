@@ -66,8 +66,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGlja2V0c1xUaWNrZXRCZWxsZXRpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Worker.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV29ya2VyLmNzaHRtbA==
+[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Workers/availableTickets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV29ya2Vyc1xhdmFpbGFibGVUaWNrZXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/Workers/Worker.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcV29ya2Vyc1xXb3JrZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Steve/OneDrive/Documents/Projects/ticket-system/Pages/_ViewImports.cshtml]

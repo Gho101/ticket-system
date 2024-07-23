@@ -29,7 +29,7 @@
                 }
 
             }
-            String sqlDel = "DELETE FROM Tickets WHERE id=@id;";
+            String sqlDel = "DELETE FROM Tickets WHERE id = @id;";
             using (SqlCommand command = new SqlCommand(sqlDel, connection))
             {
                 command.Parameters.AddWithValue("@id", id);
