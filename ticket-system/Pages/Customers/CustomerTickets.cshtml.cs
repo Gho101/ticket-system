@@ -97,7 +97,7 @@ namespace ticket_system.Pages.Customers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine("Exception: " + ex.Message);
             }
 
 
