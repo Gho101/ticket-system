@@ -3,7 +3,7 @@
 
 @{
     string connectionString = "Server=LAPTOP-97T368JO;Database=Ticket_Problem;Trusted_Connection=True; TrustServerCertificate=True;";
-    String id = Request.Query["id"];
+    String? id = Request.Query["id"];
     int Cid;
 
     try
@@ -11,10 +11,10 @@
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             connection.Open();
-            String sql = "SELECT CustomerID FROM Tickets WHERE Tickets.ID = @ID";
+            String sql = "SELECT CustomerID FROM Tickets WHERE Tickets.ID = @id";
             using (SqlCommand command = new SqlCommand(sql, connection))
             {
-                command.Parameters.AddWithValue("@ID", id);
+                command.Parameters.AddWithValue("@id", id);
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     if (reader.Read())
