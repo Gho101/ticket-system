@@ -3,6 +3,7 @@
 @{
 }
 
+
 <br>
 <h2>List of Open Tickets</h2>
 
@@ -26,7 +27,8 @@
                 <td>@item.customer</td>
                 <td>@item.problem</td>
                 <td>
-                    <a class="btn btn-success btn-sm" href="/Workers/Pickup?id=@Model.worker.id">Pickup</a>
+                    <a class="btn btn-success btn-sm" href="/Workers/Pickup?id=@Model.worker.id&ticketId=@item.id">Pickup</a>
+                    
                 </td>
             </tr>
         }

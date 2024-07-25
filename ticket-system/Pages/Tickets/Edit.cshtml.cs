@@ -13,9 +13,7 @@ namespace ticket_system.Pages.Tickets
         public String succsesMessage = "";
         public void OnGet()
         {
-            String id = Request.Query["id"];
-
-            ticketInfo.id = id;
+            ticketInfo.id = Request.Query["id"];
 
             try
             {
@@ -26,7 +24,7 @@ namespace ticket_system.Pages.Tickets
                     String getProblem = "SELECT Problem FROM Tickets WHERE id = @id;";
                     using (SqlCommand command = new SqlCommand(getProblem, connection))
                     {
-                        command.Parameters.AddWithValue("@id", id);
+                        command.Parameters.AddWithValue("@id", ticketInfo.id);
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if(reader.Read())

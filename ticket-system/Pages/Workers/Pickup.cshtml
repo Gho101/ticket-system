@@ -1,0 +1,46 @@
+﻿@page
+@using Microsoft.Data.SqlClient;
+@using Tickets;
+@{
+    Worker worker = new Worker();
+    TicketInfo ticket = new TicketInfo();
+    worker.id = Request.Query["id"];
+    ticket.id = Request.Query["ticketId"];
+
+    try
+    {
+        String connnectionString = "Server=LAPTOP-97T368JO;Database=Ticket_Problem;Trusted_Connection=True; TrustServerCertificate=True;";
+        using (SqlConnection connection = new SqlConnection(connnectionString))
+        {
+            connection.Open();
+            String sqlStatus = "SELECT ID FROM Statuses WHERE TicketStatus = 'In Progress'";
+
+            using (SqlCommand command = new SqlCommand(sqlStatus, connection))
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                        ticket.status = "" + reader.GetInt32(0);
+                }
+            }
+
+            String ticketQurry = "UPDATE Tickets SET WorkerID = @wId, StatusID = @sId WHERE Tickets.ID = @tId";
+
+            using (SqlCommand command = new SqlCommand(ticketQurry, connection))
+            {
+                command.Parameters.AddWithValue("@wId", worker.id);
+                command.Parameters.AddWithValue("@sId", ticket.status);
+                command.Parameters.AddWithValue("@tId", ticket.id);
+
+                command.ExecuteNonQuery();
+            }
+        }
+
+        Response.Redirect($"/Workers/availableTickets?id={worker.id}");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("An error occurred: " + ex.Message);
+        Response.Redirect($"/Workers/availableTickets?id={worker.id}");
+    }
+}
